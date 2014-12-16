@@ -9,15 +9,15 @@ function Points (path) {
     this._path = abs(isarray(path) ? path : parse(path));
 }
 
-Points.prototype.at = function (pos) {
-    return this._walk(pos).pos;
+Points.prototype.at = function (pos, opts) {
+    return this._walk(pos, opts).pos;
 };
 
 Points.prototype.length = function () {
     return this._walk(null).length;
 };
 
-Points.prototype._walk = function (pos) {
+Points.prototype._walk = function (pos, opts) {
     var cur = [ 0, 0 ];
     var prev = [ 0, 0, 0 ];
     var len = 0;
