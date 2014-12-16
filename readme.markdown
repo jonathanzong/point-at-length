@@ -1,6 +1,6 @@
 # point-at-length
 
-get a point in an svg string path at a length
+compute a point from an svg path string
 
 This is like `path.getPointAtLength(t)` for an svg `<path>` element, but works
 in node + browsers.
