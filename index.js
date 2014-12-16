@@ -21,7 +21,7 @@ Points.prototype._walk = function (pos) {
     var cur = [ 0, 0 ];
     var prev = [ 0, 0, 0 ];
     var len = 0;
-    var fudge = 1.085;
+    var fudge = 1.045;
     if (typeof pos === 'number') pos *= fudge;
     
     for (var i = 0; i < this._path.length; i++) {
@@ -79,7 +79,7 @@ Points.prototype._walk = function (pos) {
             prev[2] = len;
         }
     }
-    return { length: len / Math.sqrt(fudge), pos: cur };
+    return { length: len / fudge, pos: cur };
     
     function xof (p, t) {
         return Math.pow((1-t), 3) * cur[0]

@@ -66,7 +66,7 @@ var expected = [
 ];
 
 test('at', function (t) {
-    t.plan(expected.length);
+    t.plan(expected.length * 2);
     var pt = points(ptsstr);
     
     for (var i = 0; i < expected.length; i++) {
