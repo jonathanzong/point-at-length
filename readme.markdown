@@ -8,6 +8,8 @@ in node + browsers.
 If you're in the browser, it's best to use the native svg implementation since
 that will be faster and more accurate.
 
+[![build status](https://secure.travis-ci.org/substack/point-at-length.png)](http://travis-ci.org/substack/point-at-length)
+
 # example
 
 ``` js
