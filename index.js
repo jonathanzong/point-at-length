@@ -59,6 +59,11 @@ Points.prototype._walk = function (pos) {
                 prev[2] = len;
             }
         }
+        else if (p[0] === 'L') {
+            len += dist(cur[0], cur[1], p[1], p[2]);
+            cur[0] = p[1];
+            cur[0] = p[2];
+        }
     }
     return { length: len / Math.sqrt(fudge), pos: cur };
     
