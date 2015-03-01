@@ -1,12 +1,13 @@
 var parse = require('parse-svg-path');
 var isarray = require('isarray');
 var abs = require('abs-svg-path');
+var path2curve = require('./lib/raphael.js');
 
 module.exports = Points;
 
 function Points (path) {
     if (!(this instanceof Points)) return new Points(path);
-    this._path = abs(isarray(path) ? path : parse(path));
+    this._path = abs(path2curve(isarray(path) ? path : parse(path)));
 }
 
 Points.prototype.at = function (pos, opts) {
